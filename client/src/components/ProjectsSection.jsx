@@ -20,14 +20,16 @@ const ProjectsSection = ({ projectsArray }) => {
   return (
     <div className="projects">
       <m.div className="h-screen bg-blue-700 no-scrollbar w-full  overflow-scroll">
-        {projects.map((box) => (
-          <ProjectCard
-            key={box}
-            id={box}
-            canOpenApp={canOpenApp}
-            setOpenedApp={setOpenedApp}
-          />
-        ))}
+        {projectsArray.map((box) => {
+          return (
+            <ProjectCard
+              key={box._id}
+              project={box}
+              canOpenApp={canOpenApp}
+              setOpenedApp={setOpenedApp}
+            />
+          );
+        })}
 
         <AnimatePresence>
           {openedApp && (

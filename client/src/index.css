@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,7 +30,7 @@
   }
 
   .infoContainer {
-    @apply w-full h-screen bg-pink-400 border-b-2 border-black;
+    @apply w-full h-screen bg-white border-b-2 px-14 py-[50px] border-black flex justify-center items-center flex-col;
   }
 
   /* PROJECT SECTION*/

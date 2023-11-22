@@ -1,5 +1,5 @@
-const InfoContainer = () => {
-  return <div className="infoContainer">InfoContainer</div>;
+const InfoContainer = ({ children }) => {
+  return <div className="infoContainer">{children}</div>;
 };
 
 export default InfoContainer;

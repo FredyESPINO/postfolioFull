@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        archivo: ["Archivo Black", "sans-serif"],
+        saira: ["Saira Extra Condensed", "sans-serif"],
+      },
+    },
     screens: {
       sm: "320px",
       md: "640px",
