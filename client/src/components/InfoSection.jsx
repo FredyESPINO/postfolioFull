@@ -15,13 +15,9 @@ const InfoSection = () => {
         </h1>
       </InfoContainer>
 
-      {/* <InfoContainer>
-        <div className="w-full h-10 bg-slate-200"></div>
-      </InfoContainer>
+      <InfoContainer></InfoContainer>
 
-      <InfoContainer>
-        <div className="w-full h-10 bg-slate-200"></div>
-      </InfoContainer> */}
+      <InfoContainer></InfoContainer>
     </div>
   );
 };
