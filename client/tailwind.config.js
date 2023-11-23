@@ -18,7 +18,7 @@ export default {
         },
       },
       animation: {
-        slider: "slide 20s linear infinite",
+        slider: "slide 10s linear infinite",
       },
     },
     screens: {

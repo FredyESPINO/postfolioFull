@@ -4,20 +4,23 @@ import styles from "./slider.module.css";
 const Silder = ({ arrayItems, heightContainer }) => {
   let arrayToRender = Array.isArray(arrayItems)
     ? arrayItems
-    : Array(4).fill(arrayItems);
+    : Array(3).fill(arrayItems);
 
   return (
     <div
-      className={`w-screen  relative border-2 border-black flex flex-row gap-16`}
+      className={`w-screen  relative flex flex-1 justify-center items-center  flex-row gap-16`}
       style={{ height: heightContainer ? heightContainer : "50px" }}
     >
-      {[...Array(5)].map((section, index) => (
-        <div
-          key={index}
-          className="w-[100%] h-[100%] flex left-0 justify-center items-center gap-16 animate-slider "
-        >
+      {[...Array(3)].map((_, index) => (
+        <div key={index} className="flex  gap-16 ">
           {arrayToRender.map((item, i) => (
-            <p key={i} className="text-black">
+            <p
+              key={i}
+              className="text-black
+            font-bold text-[50px]
+             animate-slider
+            "
+            >
               {item}
             </p>
           ))}
