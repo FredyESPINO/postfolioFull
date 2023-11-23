@@ -1,4 +1,4 @@
-import person from './types/person'
 import project from './types/project'
+import info from './types/info'
 
-export const schemaTypes = [person, project]
+export const schemaTypes = [info, project]

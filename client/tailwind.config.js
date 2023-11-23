@@ -7,6 +7,19 @@ export default {
         archivo: ["Archivo Black", "sans-serif"],
         saira: ["Saira Extra Condensed", "sans-serif"],
       },
+      keyframes: {
+        slide: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-100%)",
+          },
+        },
+      },
+      animation: {
+        slider: "slide 20s linear infinite",
+      },
     },
     screens: {
       sm: "320px",

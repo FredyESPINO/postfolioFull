@@ -1,5 +1,5 @@
 import useWindowSize from "./hooks/useWindowSize";
-import { fetchProjects } from "./client";
+import { fetchProjects, fetchData } from "./client";
 
 import ProjectsSection from "./components/ProjectsSection";
 import InfoSection from "./components/InfoSection";
@@ -13,17 +13,23 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const { width } = useWindowSize();
+  const [info, setInfo] = useState([]);
 
   useEffect(() => {
     setLoading(true);
-    fetchProjects("en")
-      .then((res) => setProjects(res))
+    fetchData("en")
+      .then((res) => {
+        setProjects(res.projects);
+        setInfo(res.info);
+      })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, []);
 
+  useEffect(() => {
+    console.log(info);
+  }, [info]);
   if (loading) {
     return <h1>Cargando</h1>;
   }
@@ -31,13 +37,17 @@ function App() {
   return (
     <main className="main ">
       <InfoSection />
-      <ProjectsSection
-        projectsArray={projects}
-        setIsModalOpen={setIsModalOpen}
-      />
+
       <MenuButton setIsMenuOpen={setIsMenuOpen} isModalOpen={isModalOpen} />
 
-      {width < 640 && (
+      {width > 768 && (
+        <ProjectsSection
+          projectsArray={projects}
+          setIsModalOpen={setIsModalOpen}
+        />
+      )}
+
+      {width < 768 && (
         <MobileProjectSection
           isMenuOpen={isMenuOpen}
           setIsMenuOpen={setIsMenuOpen}

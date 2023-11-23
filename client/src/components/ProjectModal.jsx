@@ -6,7 +6,7 @@ const ProjectModal = ({ closeApp, openedApp }) => {
     <m.div
       onClick={() => closeApp()}
       layoutId={openedApp.title}
-      className="absolute  w-screen h-screen top-0 bottom-0 right-0 left-0 z-10 bg-red-500 flex items-center justify-center"
+      className="absolute  w-screen h-screen top-0 bottom-0 right-0 left-0 z-10 bg-black flex items-center justify-center"
     >
       <m.div
         initial={{ opacity: 0 }}

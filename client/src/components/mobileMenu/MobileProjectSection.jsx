@@ -31,9 +31,9 @@ const MobileProjectSection = ({
     <div
       className={`  ${
         isMenuOpen ? "top-0" : "top-[100%]"
-      }  left-0 right-0 z-10 bottom-0 absolute delay-150 ease-in-out duration-300 md:hidden  transition-all bg-black `}
+      }  left-0 right-0 z-10 bottom-0 absolute delay-150 ease-in-out duration-300 lg:hidden  transition-all bg-black `}
     >
-      <m.div className="h-screen bg-blue-700 no-scrollbar w-full  overflow-scroll">
+      <m.div className="h-screen bg-black no-scrollbar w-full  overflow-scroll px-5">
         {projectsArray.map((box) => (
           <ProjectCard
             key={box._id + "_M"}

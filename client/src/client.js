@@ -19,3 +19,31 @@ export const fetchProjects = async (lenguage) => {
 
   return projects;
 };
+export const fetchInfo = async (lenguage) => {
+  const projects = await client.fetch(
+    `*[_type == "info" && lenguage=="${lenguage}"]`
+  );
+
+  return projects;
+};
+
+export const fetchData = async (lenguage) => {
+  const fetchStrngs = [
+    `*[_type == "project" && lenguage=="${lenguage}"]`,
+    `*[_type == "info" && lenguage=="${lenguage}"]`,
+  ];
+
+  const promArray = await Promise.all(
+    fetchStrngs.map(async (string) => {
+      const response = await client.fetch(string);
+      return response;
+    })
+  );
+
+  const dataObj = {
+    projects: promArray[0],
+    info: promArray[1],
+  };
+
+  return dataObj;
+};

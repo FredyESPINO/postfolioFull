@@ -26,7 +26,7 @@
 
   /* INFO SECTION */
   .info {
-    @apply w-full md:w-2/3 lg:w-3/4  h-screen bg-red-500 overflow-scroll no-scrollbar sm:bg-blue-500 md:bg-green-500 lg:bg-pink-500 relative;
+    @apply w-full  lg:w-2/3 xl:w-3/4  h-screen bg-red-500 overflow-scroll no-scrollbar sm:bg-blue-500 md:bg-green-500 lg:bg-pink-500 relative;
   }
 
   .infoContainer {
@@ -35,7 +35,7 @@
 
   /* PROJECT SECTION*/
   .projects {
-    @apply h-screen bg-blue-700 no-scrollbar hidden md:block md:w-1/3 lg:w-1/4 overflow-scroll;
+    @apply h-screen bg-black no-scrollbar hidden lg:block lg:w-1/3 xl:w-1/4 overflow-scroll;
   }
 
   /* CARD PROJECT */

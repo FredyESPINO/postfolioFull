@@ -19,7 +19,7 @@ const ProjectsSection = ({ projectsArray }) => {
 
   return (
     <div className="projects">
-      <m.div className="h-screen bg-blue-700 no-scrollbar w-full  overflow-scroll">
+      <m.div className="h-screen bg-black no-scrollbar w-full  overflow-scroll px-3">
         {projectsArray.map((box) => {
           return (
             <ProjectCard
