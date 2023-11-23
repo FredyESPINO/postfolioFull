@@ -7,15 +7,10 @@ const Silder = ({ arrayItems, heightContainer }) => {
     : Array(4).fill(arrayItems);
 
   return (
-    // CAROUSEL CONTAINER
     <div
       className={`w-screen  relative border-2 border-black flex flex-row gap-16`}
       style={{ height: heightContainer ? heightContainer : "50px" }}
     >
-      {/* CAROUSEL TRACK */}
-
-      {/* CAROUSEL ITEMS */}
-
       {[...Array(5)].map((section, index) => (
         <div
           key={index}
